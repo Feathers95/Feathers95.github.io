@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    /* Use quotation marks if font name is multiple words*/
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 1.5vw;
+    background-color: #9DC8C8; 
+}
+
+hr {
+    margin: 0;
+    background-color: #9DC8C8;
+}
+
+body > main > article {
+    width: 75%;
+    margin: auto;
+}
+
+body > main > article > header{
+    text-align: center;
+}
+
+/* Header segment */
+
+body > header {
+    background-color: #519D9E;
+}
+
+.main_logo {
+    margin: 0;
+}
+
+/* Footer segment */
+
+body > footer {
+    background-color: #9DC8C8;
+}
+
+body > footer > h2 {
+    color: #ffffff;
+    margin: 5px 10px;
+}
+
+#body_footer_list{
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#body_footer_list > div > li > a{
+    color: #ffffff;
+}
