@@ -2,8 +2,9 @@ body {
     margin: 0;
     /* Use quotation marks if font name is multiple words*/
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 1.5vw;
-    background-color: #9DC8C8; 
+    font-size: 15px;
+    background-color: #9DC8C8;
+    color: #134244; 
 }
 
 hr {
@@ -11,23 +12,113 @@ hr {
     background-color: #9DC8C8;
 }
 
+body > main {
+    display: flex;
+    flex-direction: column;
+}
+
 body > main > article {
     width: 75%;
     margin: auto;
 }
 
-body > main > article > header{
-    text-align: center;
-}
-
-/* Header segment */
+/* Main header segment */
 
 body > header {
     background-color: #519D9E;
+    display: flex;
+    justify-content: space-around;
+    height: 20%;
 }
 
-.main_logo {
-    margin: 0;
+/* > Title segment */
+
+#main_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#main_title > h1 {
+    margin: 0px;
+}
+
+#main_title > h4 {
+    margin: 0px;
+}
+
+/* > Navigation segment */
+
+#main_navigation > ul{
+    display: flex;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.main_nav_list{
+    list-style: none;
+    padding: 20px 0px;
+    margin: 0px;
+    border-left: 1px dotted #9DC8C8;
+    border-right: 1px dotted #9DC8C8;;
+}
+
+/*select only nav li element located after another nav li element*/
+.main_nav_list ~ .main_nav_list{
+    border-left: 0px solid #9DC8C8;
+}
+
+.main_nav_list > a{
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    color: #9DC8C8;
+}
+
+/* Tier segments */
+
+.tier {
+    display: flex;
+    padding: 15px 0px 0px 0px;
+}
+
+.tier > h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px;
+    font-size: 50px;
+    padding: 20px;
+    border: 2px solid #ffffff;
+    background-color: #073538;
+    color: #00b1b1;
+}
+
+.tier > nav > ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding-left: 0px;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    background-color: #073538;
+}
+
+.tier_nav_list {
+    list-style: none;
+    padding: 25px 5px;
+    margin: 0px;
+}
+
+.tier_nav_list > a{
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid #37c9c9;
+    background-color: #1e7c7e;
+    color: #a9f8f8;
 }
 
 /* Footer segment */
