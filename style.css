@@ -14,6 +14,11 @@ hr {
 
 body > main {
     display: flex;
+    justify-content: space-evenly;
+}
+
+body > main > div {
+    display: flex;
     flex-direction: column;
 }
 
@@ -57,7 +62,8 @@ body > header {
 
 .main_nav_list{
     list-style: none;
-    padding: 20px 0px;
+    text-align: center;
+    padding: 1vb 0px;
     margin: 0px;
     border-left: 1px dotted #9DC8C8;
     border-right: 1px dotted #9DC8C8;;
@@ -70,15 +76,41 @@ body > header {
 
 .main_nav_list > a{
     text-decoration: none;
-    padding: 20px;
+    padding: 1vb;
     font-size: 20px;
     color: #9DC8C8;
+}
+
+/* Aside segment */
+
+body > main > aside {
+    text-align: center;
+}
+
+body > main > aside > h4{
+    text-align: center;
+    margin: 1vb 2vb;
+    padding: 0.5vb;
+    background-color: #b2d4da;
+    border-radius: 10%;
+}
+
+body > main > aside > nav > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 /* Tier segments */
 
 .tier {
-    display: flex;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 0fr;
+    grid-template-areas:
+    "tier characters";
     padding: 15px 0px 0px 0px;
 }
 
@@ -86,24 +118,29 @@ body > header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     margin: 0px;
     font-size: 50px;
-    padding: 20px;
     border: 2px solid #ffffff;
     background-color: #073538;
     color: #00b1b1;
+    grid-area: tier;
+}
+
+.tier > nav {
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    background-color: #073538;
 }
 
 .tier > nav > ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0px;
+    margin: auto;
     padding-left: 0px;
-    border-top: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
-    background-color: #073538;
+    grid-area: characters;
 }
 
 .tier_nav_list {
@@ -123,21 +160,44 @@ body > header {
 
 /* Footer segment */
 
-body > footer {
-    background-color: #9DC8C8;
+#footer_content {
+    background-color: #519D9E;
+    width: 99%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        "image author edit_date"
+        "image info1 info2";
 }
 
-body > footer > h2 {
-    color: #ffffff;
-    margin: 5px 10px;
+#footer_content > h2{
+    margin: auto;
+    text-align: center;
+    grid-area: author;
 }
 
-#body_footer_list{
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
+#footer_content > h3{
+    margin: auto;
+    text-align: center;
+    grid-area: edit_date;
 }
 
-#body_footer_list > div > li > a{
-    color: #ffffff;
+#footer_content > img {
+    margin: 0px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    grid-area: image;
+}
+
+#footer_info1 {
+    margin: 0px 3%;
+    grid-area: info1;
+    text-align: center;
+}
+
+#footer_info2 {
+    margin: 0px 3%;
+    grid-area: info2;
+    text-align: center;
 }
